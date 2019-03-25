@@ -1,0 +1,12 @@
+Species	Depletion
+Aurora	0.63
+Bocaccio	0.238
+Cabezon	0.452
+Canary	0.225
+Darkblotched	0.29
+Dover	0.847
+Petrale	0.104
+Sthorny	0.75
+Lthorny	0.684
+Widow	0.507
+

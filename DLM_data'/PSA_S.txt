@@ -1,0 +1,11 @@
+Species	mean sd
+Aurora	0.35 0.20
+Bocaccio 0.39 0.18
+Cabezon	0.51 0.28
+Canary	0.31 0.17
+Darkblotched	0.39 0.2
+Dover	0.54 0.28
+Petrale	0.39 0.18
+Sthorny	0.41 0.25
+Lthorny	0.58 0.27
+Widow	0.34 0.22
