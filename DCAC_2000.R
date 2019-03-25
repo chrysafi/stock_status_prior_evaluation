@@ -5,7 +5,7 @@
 DCAC_2000<-function (x, Data, reps = 100) 
   
 {
-  dependencies = "Data@Cat, Data@Mort, Data@CV_Mort, Data@Dt, Data@CV_Dt,Data@FMSY_M, Data@CV_FMSY_M, Data@BMSY_B0, Data@CV_BMSY_B0"
+  dependencies = "Data@Cat, Data@Mort, Data@CV_Mort, Data@Dep, Data@CV_Dep,Data@FMSY_M, Data@CV_FMSY_M, Data@BMSY_B0, Data@CV_BMSY_B0"
   if (is.na(Data@BMSY_B0[x]) | is.na(Data@CV_BMSY_B0[x])) 
     return(NA)
   ##### average catch from year that max catch ir reached until 2000 by AC######
@@ -18,7 +18,7 @@ DCAC_2000<-function (x, Data, reps = 100)
   FMSY_M <- trlnorm(reps, Data@FMSY_M[x], Data@CV_FMSY_M[x])
   
   Bt_K <- rbeta(reps, alphaconv(Data@Dep,Data@Dep*Data@CV_Dep), ### not using [x]for the non-beta distributions 
-                betaconv(Data@Dep,Data@Dep*Data@CV_Dt))
+                betaconv(Data@Dep,Data@Dep*Data@CV_Dep))
   Bt_K[is.na(Bt_K)]<-0   # removes nas created in the non-beta distributions
   
   Bt_K[Bt_K > 1] <- 1

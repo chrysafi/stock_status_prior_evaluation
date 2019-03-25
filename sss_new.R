@@ -4,7 +4,7 @@
 #library(devtools)
 #devtools::install_github("shcaba/SSS", build_vignettes = TRUE)
 
-SSS.new<-function (x,data, reps) 
+SSS_new<-function (x,data, reps) 
   
 {
     dependencies = "Data@Mort,Data@Dep, Data@vbLinf,Data@vbK, Data@Year,Data@Name, Data@Cat,Data@FMSY_M, Data@BMSY_B0
@@ -238,5 +238,5 @@ SSS.new<-function (x,data, reps)
 }
 class(SSS.AC)<-"MP"
 
-sfExport('SSS.new')
+sfExport('SSS_new')
 

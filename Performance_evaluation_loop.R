@@ -18,7 +18,6 @@ sfExportAll()
 
 ## workign directory
 Dir.in<- "C:/Users/"   #  Add the directory that the files are located
-Dir.in<- "C:/Users/chrysafi/Documents/data_poor_methods/models_performance/Github functions/"
 
 ###### import data ################
 ## experts' priors

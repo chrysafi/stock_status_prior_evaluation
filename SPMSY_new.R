@@ -1,3 +1,6 @@
+### SPMSY where the final accepted biomass trajectories between upper and lower bound
+### are sampled to describe the desired stock status prior
+
 SPMSY_new<-function (x, Data, reps = 100) 
 {
   dependencies = "Data@MaxAge, Data@vbK, Data@L50, Data@Cat, Data@Dep,Data@CV_Dep"
@@ -8,7 +11,9 @@ SPMSY_new<-function (x, Data, reps = 100)
   }
   ########################################################## 
  
-  nsamp <- reps*1000  # large enough to make sure there is always enough r-K pairs to sample from 
+  nsamp <- reps*1000  # large enough to make sure there is always enough r-K pairs to sample from by AC
+  
+  ## rule for defining intrinsic rate r
   rule <- rep(4, 3)
   
   if (Data@vbK[x] > 0.3) {
@@ -58,11 +63,11 @@ SPMSY_new<-function (x, Data, reps = 100)
   }
   
   ### rule for setting stock status the last year ##
-  ## setting the LB and UB at the 1-99% of the desired prior
+  ## setting the LB and UB at the 1-99% of the desired prior by AC
   
-  Dist<-rbeta(20000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),
+  Dist<-rbeta(20000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),  ### not using [x]for the non-beta distributions
               betaconv(Data@Dep,Data@Dep*Data@CV_Dep)) 
-  Dist[is.na(Dist)]<-0   # removed nas created in the non-beta distributions
+  Dist[is.na(Dist)]<-0   # removes nas created in the non-beta distributions
   LB<-quantile(Dist,0.01)
   UB<-quantile(Dist,0.99)
   
@@ -89,7 +94,7 @@ SPMSY_new<-function (x, Data, reps = 100)
   #### sampling from the retained trajectories in intervals of 0.05 to describe the desired shape of stock depletion 
   ##### addition by AC ##########
   
-  prior<-rbeta(20000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),
+  prior<-rbeta(5000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),
                 betaconv(Data@Dep,Data@Dep*Data@CV_Dep)) 
   prior[is.na(prior)]<-0     # removes nas in the non-beta priors
   
@@ -109,7 +114,7 @@ SPMSY_new<-function (x, Data, reps = 100)
 
     vec<-vector(mode = "numeric", length = prc[i])
    
-    ### if no density in the prior then 0 samples with me taken from dep
+    ### if no density in the prior then 0 samples will me taken from dep
     if (prc[i]==0) {
       val_D[[i]]<-0
       val_K[[i]]<- 0
