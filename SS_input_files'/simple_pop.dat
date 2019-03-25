@@ -1,0 +1,179 @@
+#C data file created using the SS_writedat function in the R package r4ss
+#C should work with SS version: 
+#C file write time: 2019-02-10 23:13:39
+#
+1916 #_styr
+2010 #_endyr
+1 #_nseas
+12 #_months_per_seas
+4 #_Nsubseasons
+1 #_spawn_month
+2 #_Nsexes
+86 #_Nages
+1 #_Nareas
+2 #_Nfleets
+#_fleetinfo
+#_type	surveytiming	area	units	need_catch_mult	fleetname
+1	-1 	1	1	0	Fishery	#_1
+3	0.5	1	1	0	Depl   	#_2
+#_V1	V2	V3	V4	V5
+ -999	1	1	   0.00	0.05	#_1         
+ 1916	1	1	  39.73	0.05	#_2         
+ 1917	1	1	  61.78	0.05	#_3         
+ 1918	1	1	  64.37	0.05	#_4         
+ 1919	1	1	  41.81	0.05	#_5         
+ 1920	1	1	  44.12	0.05	#_6         
+ 1921	1	1	  38.58	0.05	#_7         
+ 1922	1	1	  35.85	0.05	#_8         
+ 1923	1	1	  42.42	0.05	#_9         
+ 1924	1	1	  44.28	0.05	#_10        
+ 1925	1	1	  50.86	0.05	#_11        
+ 1926	1	1	  66.72	0.05	#_12        
+ 1927	1	1	  60.39	0.05	#_13        
+ 1928	1	1	  69.54	0.05	#_14        
+ 1929	1	1	  86.32	0.05	#_15        
+ 1930	1	1	  90.44	0.05	#_16        
+ 1931	1	1	  96.83	0.05	#_17        
+ 1932	1	1	  67.31	0.05	#_18        
+ 1933	1	1	  65.28	0.05	#_19        
+ 1934	1	1	  65.55	0.05	#_20        
+ 1935	1	1	  74.61	0.05	#_21        
+ 1936	1	1	  75.34	0.05	#_22        
+ 1937	1	1	  86.98	0.05	#_23        
+ 1938	1	1	  83.18	0.05	#_24        
+ 1939	1	1	  85.93	0.05	#_25        
+ 1940	1	1	 231.51	0.05	#_26        
+ 1941	1	1	 356.36	0.05	#_27        
+ 1942	1	1	 531.38	0.05	#_28        
+ 1943	1	1	1813.96	0.05	#_29        
+ 1944	1	1	3068.18	0.05	#_30        
+ 1945	1	1	4829.24	0.05	#_31        
+ 1946	1	1	3127.71	0.05	#_32        
+ 1947	1	1	1854.77	0.05	#_33        
+ 1948	1	1	1378.21	0.05	#_34        
+ 1949	1	1	1259.19	0.05	#_35        
+ 1950	1	1	1390.61	0.05	#_36        
+ 1951	1	1	1231.00	0.05	#_37        
+ 1952	1	1	1188.17	0.05	#_38        
+ 1953	1	1	1120.90	0.05	#_39        
+ 1954	1	1	1349.45	0.05	#_40        
+ 1955	1	1	1384.13	0.05	#_41        
+ 1956	1	1	1598.21	0.05	#_42        
+ 1957	1	1	2167.15	0.05	#_43        
+ 1958	1	1	1655.59	0.05	#_44        
+ 1959	1	1	1739.50	0.05	#_45        
+ 1960	1	1	2055.83	0.05	#_46        
+ 1961	1	1	1853.76	0.05	#_47        
+ 1962	1	1	2062.99	0.05	#_48        
+ 1963	1	1	1349.28	0.05	#_49        
+ 1964	1	1	1611.74	0.05	#_50        
+ 1965	1	1	1470.94	0.05	#_51        
+ 1966	1	1	3199.61	0.05	#_52        
+ 1967	1	1	1178.45	0.05	#_53        
+ 1968	1	1	1833.82	0.05	#_54        
+ 1969	1	1	1283.45	0.05	#_55        
+ 1970	1	1	1617.33	0.05	#_56        
+ 1971	1	1	1944.95	0.05	#_57        
+ 1972	1	1	2292.49	0.05	#_58        
+ 1973	1	1	3126.41	0.05	#_59        
+ 1974	1	1	1980.33	0.05	#_60        
+ 1975	1	1	1693.75	0.05	#_61        
+ 1976	1	1	1313.23	0.05	#_62        
+ 1977	1	1	1828.28	0.05	#_63        
+ 1978	1	1	3873.56	0.05	#_64        
+ 1979	1	1	3904.59	0.05	#_65        
+ 1980	1	1	6113.26	0.05	#_66        
+ 1981	1	1	5062.21	0.05	#_67        
+ 1982	1	1	9005.88	0.05	#_68        
+ 1983	1	1	8000.28	0.05	#_69        
+ 1984	1	1	3292.02	0.05	#_70        
+ 1985	1	1	2976.12	0.05	#_71        
+ 1986	1	1	2601.54	0.05	#_72        
+ 1987	1	1	3180.63	0.05	#_73        
+ 1988	1	1	3073.83	0.05	#_74        
+ 1989	1	1	3335.30	0.05	#_75        
+ 1990	1	1	2803.61	0.05	#_76        
+ 1991	1	1	3207.12	0.05	#_77        
+ 1992	1	1	2866.54	0.05	#_78        
+ 1993	1	1	2235.36	0.05	#_79        
+ 1994	1	1	1217.92	0.05	#_80        
+ 1995	1	1	1196.44	0.05	#_81        
+ 1996	1	1	1558.83	0.05	#_82        
+ 1997	1	1	1480.11	0.05	#_83        
+ 1998	1	1	1494.97	0.05	#_84        
+ 1999	1	1	 898.71	0.05	#_85        
+ 2000	1	1	 199.84	0.05	#_86        
+ 2001	1	1	 133.04	0.05	#_87        
+ 2002	1	1	 120.54	0.05	#_88        
+ 2003	1	1	 134.37	0.05	#_89        
+ 2004	1	1	 103.39	0.05	#_90        
+ 2005	1	1	  53.90	0.05	#_91        
+ 2006	1	1	  64.80	0.05	#_92        
+ 2007	1	1	  57.45	0.05	#_93        
+ 2008	1	1	  53.81	0.05	#_94        
+ 2009	1	1	  58.11	0.05	#_95        
+ 2010	1	1	  81.82	0.05	#_96        
+-9999	0	0	   0.00	0.00	#_terminator
+#_CPUE_and_surveyabundance_observations
+#_Units:  0=numbers; 1=biomass; 2=F; >=30 for special types
+#_Errtype:  -1=normal; 0=lognormal; >0=T
+#_SD_Report: 0=no sdreport; 1=enable sdreport
+#_Fleet	Units	Errtype	SD_Report
+1	1 	0	0	#_Fishery
+2	34	0	0	#_Depl   
+#
+#_CPUE_data
+#_year	seas	index	obs	se_log
+1916 1 2 1 0.01 #
+2010 1 2 0.370018583878839 0.01 # DEPLETION
+-9999 1 1 1 1
+0 #_N_discard_fleets
+#_discard_units (1=same_as_catchunits(bio/num); 2=fraction; 3=numbers)
+#_discard_errtype:  >0 for DF of T-dist(read CV below); 0 for normal with CV; -1 for normal with se; -2 for lognormal
+#
+#_discard_fleet_info
+#
+#_discard_data
+#
+#_meanbodywt
+0 #_use_meanbodywt
+ #_DF_for_meanbodywt_T-distribution_like
+#
+#_population_length_bins
+2 # length bin method: 1=use databins; 2=generate from binwidth,min,max below; 3=read vector
+1 # binwidth for population size comp
+2 # minimum size in the population (lower edge of first bin and size at age 0.00)
+68.3 # maximum size in the population (lower edge of last bin)
+1 #_use_lencomp
+#
+#_len_info
+#_mintailcomp	addtocomp	combine_M_F	CompressBins	CompError	ParmSelect	minsamplesize
+-1	0.001	0	0	0	0	0.01	#_Fishery
+-1	0.001	0	0	0	0	0.01	#_Depl   
+33 #_N_lbins
+#_lbin_vector
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 #_lbin_vector
+#
+#_lencomp
+#_X.9999	X0	X0.1	X0.2	X0.3	X0.4	X0.5	X0.6	X0.7	X0.8	X0.9	X0.10	X0.11	X0.12	X0.13	X0.14	X0.15	X0.16	X0.17	X0.18	X0.19	X0.20	X0.21	X0.22	X0.23	X0.24	X0.25	X0.26	X0.27	X0.28	X0.29	X0.30	X0.31	X0.32	X0.33	X0.34	X0.35	X0.36	X0.37	X0.38	X0.39	X0.40	X0.41	X0.42	X0.43	X0.44	X0.45	X0.46	X0.47	X0.48	X0.49	X0.50	X0.51	X0.52	X0.53	X0.54	X0.55	X0.56	X0.57	X0.58	X0.59	X0.60	X0.61	X0.62	X0.63	X0.64	X0.65	X0.66	X0.67	X0.68	X0.69	X0.70
+-9999	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	#_terminator
+0 #_N_agebins
+#
+#_ageing_error
+ #_N_ageerror_definitions
+#
+#_age_info
+ #_Lbin_method: 1=poplenbins; 2=datalenbins; 3=lengths
+ #_combine males into females at or below this bin number
+#_X.9999	X0	X0.1	X0.2	X0.3	X0.4	X0.5	X0.6	X0.7
+#-9999	0	0	0	0	0	0	0	0	#_terminator
+#
+#_MeanSize_at_Age_obs
+0 #_use_MeanSize_at_Age_obs
+0 #_N_environ_variables
+0 #_N_sizefreq_methods
+0 #_do_tags
+0 #_morphcomp_data
+0 #_use_selectivity_priors
+#
+999
