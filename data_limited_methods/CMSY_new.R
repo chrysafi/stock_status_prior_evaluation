@@ -13,7 +13,7 @@ CMSY_new<-function (x, Data, reps = 100) { ## add this to the end
   ##### addition by AC ##########
   Weights<-function(Dep,CV_Dep,dep_last,kv.all,rv.all) {
     
-    exp_pr<-rbeta(1000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),
+    exp_pr<-rbeta(2000,alphaconv(Data@Dep,Data@Dep*Data@CV_Dep),
                   betaconv(Data@Dep,Data@Dep*Data@CV_Dep)) 
     exp_pr[is.na(exp_pr)]<-0
     ##### parameters for the intervals #######
