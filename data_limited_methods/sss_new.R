@@ -19,7 +19,7 @@ SSS_new<-function (x,data, reps)
   frcst.file$Yinit<-data@Year[length(data@Year)]+1
   SS_writeforecast(frcst.file, dir=Dir.in,file="forecast.ss", overwrite=TRUE,verbose=TRUE)
   ########################################################
-  dat.file<-SS_readdat_3.30(paste(Dir.in,"/simple_pop.dat",sep=""), verbose = TRUE, echoall = FALSE, section = NULL)
+  dat.file<-SS_readdat_3.30(paste(Dir.in,"/simple_data.dat",sep=""), verbose = TRUE, echoall = FALSE, section = NULL)
   dat.file$styr<- data@Year[1] ##start year
   dat.file$endyr<-data@Year[length(data@Year)] ##end year
   dat.file$Nsexes<-2 ### number of sexes 
@@ -40,8 +40,8 @@ SSS_new<-function (x,data, reps)
   nlbins<-length(seq(2,Lmax+4,2))
   dat.file$N_lbins<-nlbins
   dat.file$lbin_vector<-seq(2,Lmax+4,2)
-  SS_writedat_3.30(dat.file, outfile=paste(Dir.in,"/simple_pop.dat",sep=""), overwrite=TRUE)
-  dat.new<-readLines(paste(Dir.in,"/","simple_pop.dat",sep=""))
+  SS_writedat_3.30(dat.file, outfile=paste(Dir.in,"/simple_data.dat",sep=""), overwrite=TRUE)
+  dat.new<-readLines(paste(Dir.in,"/","simple_data.dat",sep=""))
   L<-20+all.yrs+13
   dat.new[L-1]<-paste(data@Year[1],"1 2 1 0.01 #" ,sep=" ")
   dat.new[L]<- paste(data@Year[length(data@Year)],"1 2 1 0.01 # DEPLETION" ,sep=" ")
@@ -50,10 +50,11 @@ SSS_new<-function (x,data, reps)
   line3<-strsplit(dat.new[grep("-9999\t0\t0\t0\t0\t0\t0\t0\t0\t#_terminator",dat.new)], " ")[[1]]
   line3<-"#-9999\t0\t0\t0\t0\t0\t0\t0\t0\t#_terminator"
   dat.new[grep("-9999\t0\t0\t0\t0\t0\t0\t0\t0\t#_terminator",dat.new)]<-paste(line3,collapse=" ")
-  write(dat.new,paste(Dir.in,"/","simple_pop.dat",sep=""))
+  write(dat.new,paste(Dir.in,"/","simple_data.dat",sep=""))
   ###################################################################
-  ### Control file changes ###
-  ctl.new<-readLines(paste(Dir.in,"/simple_pop.ctl",sep=""))
+  ### 
+  file changes ###
+  ctl.new<-readLines(paste(Dir.in,"/simple_control.ctl",sep=""))
   ctl.new[40]<-paste(1, " #_Growth_Age_for_L1( 999 to use as Linf)", sep="")
   ################# females ####################
   L50.line<-strsplit(ctl.new[grep("Mat50%_Fem",ctl.new)], " ")[[1]]
@@ -139,7 +140,7 @@ SSS_new<-function (x,data, reps)
   Sel_2[41]<-data@L50[x]
   Sel_2[29]<-width.95per 
   ctl.new[grep("SizeSel_P2_Fishery",ctl.new)]<-paste(Sel_2,collapse=" ")
-  write(ctl.new,paste(Dir.in,"/","simple_pop.ctl",sep=""))
+  write(ctl.new,paste(Dir.in,"/","simple_control.ctl",sep=""))
   
   #########changes in the BMSYBO file #############################
   filepath<-Dir.in
@@ -188,7 +189,7 @@ SSS_new<-function (x,data, reps)
   if (length(data@Dep)==1){  ### for beta distributions
   
   SSS_run<-SSS(filepath=Dir.in,
-                  file.name=c("simple_pop.dat","simple_pop.ctl"),
+                  file.name=c("simple_data.dat","simple_control.ctl"),
                   reps=reps,
                   seed.in=19,
                   M.in=c(3,data@Mort[x],data@Mort[x]*data@CV_Mort[x],3,data@Mort[x],data@Mort[x]*data@CV_Mort[x]),
@@ -209,7 +210,7 @@ SSS_new<-function (x,data, reps)
                   genders=T) 
   } else {   ### for the non-beta priors ##
     SSS_run<-SSS(filepath=Dir.in,
-                 file.name=c("simple_pop.dat","simple_pop.ctl"),
+                 file.name=c("simple_data.dat","simple_control.ctl"),
                  reps=reps,
                  seed.in=19,
                  M.in=c(3,data@Mort[x],data@Mort[x]*data@CV_Mort[x],3,data@Mort[x],data@Mort[x]*data@CV_Mort[x]),
