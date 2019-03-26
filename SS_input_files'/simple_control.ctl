@@ -1,5 +1,4 @@
 #V3.30.03.05
-#_data_and_control_files: 2017pop.dat // 2017pop.ctl
 #_SS-V3.30.03.05-safe;_2017_05_11;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.6
 #_SS-V3.30.03.05-safe;user_support_available_at:NMFS.Stock.Synthesis@noaa.gov
 #_SS-V3.30.03.05-safe;user_info_available_at:https://vlab.ncep.noaa.gov/group/stock-synthesis
