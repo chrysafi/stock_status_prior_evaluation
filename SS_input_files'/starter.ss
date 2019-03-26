@@ -1,7 +1,7 @@
 #V3.30.03.05
 #Based on Pacific ocean perch 2017
-simple_pop.dat
-simple_pop.ctl
+simple_data.dat
+simple_control.ctl
 0 # 0=use init values in control file; 1=use ss.par
 0 # run display detail (0,1,2)
 2
