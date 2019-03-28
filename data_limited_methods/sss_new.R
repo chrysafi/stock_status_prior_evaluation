@@ -7,8 +7,8 @@
 SSS_new<-function (x,data, reps) 
   
 {
-    dependencies = "Data@Mort,Data@Dep, Data@vbLinf,Data@vbK, Data@Year,Data@Name, Data@Cat,Data@FMSY_M, Data@BMSY_B0
-  Data@CV_Dep,Data@CV_Mort,Data@CV_vbLinf,Data@CV_vbK,Data@MaxAge, Data@L50, Data@Rec, Data@wla, Data@wlb"
+    dependencies = "Data@Mort,Data@Dep, Data@vbLinf,Data@vbK, Data@Year, Data@Cat,Data@FMSY_M, Data@BMSY_B0
+  Data@CV_Dep,Data@CV_Mort,Data@MaxAge, Data@L50, Data@Rec, Data@wla, Data@wlb"
   
   Dir.in<-paste("C:/Users/" ,"SS_input_files/",sep="")  #  Add the directory that the files are located
   
