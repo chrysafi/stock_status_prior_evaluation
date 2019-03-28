@@ -50,10 +50,7 @@ for (i in 1:10){
   data@BMSY_B0<-0.4
   data@CV_BMSY_B0<-0.1/data@BMSY_B0
   data@CV_Mort<-0.1/data@Mort
-  data@CV_vbLinf<-0.1/data@vbLinf
-  data@CV_vbK<-0.1/data@vbK
-  data@CV_L50<-0.1/data@L50
-  
+    
   ##############################################################################################
   ## mean and sd from experts ## 
   
@@ -99,7 +96,7 @@ for (i in 1:10){
   Results[4,5,]<-OCOM_new(1,data,reps)@TAC
   Results[4,6,]<-SSS_new(1,data,reps)@TAC
   
-  ######### Expert corrected bias from Perälä et al. In revision #####
+  ######### Expert corrected bias from PerÃ¤lÃ¤ et al. In revision #####
   
   EBC<-read.table(paste(Dir.in,"EBC_Priors/ebc_",i,".txt",sep=""),header=TRUE)
   EBC<-unlist(EBC)
