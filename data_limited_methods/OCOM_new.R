@@ -4,7 +4,7 @@
 ## the desired beta prior is the input
 
 OCOM_new<-function (x,Data,reps){ 
-  dependencies="Data@Year,Data@Cat, Data@Mort"
+  dependencies="Data@Year,Data@Cat, Data@Mort, Data@FMSY_M"
   ####helping function #################### 
   # Biomass dynamics model
   BDM = function(K, r, S, b, C) {
