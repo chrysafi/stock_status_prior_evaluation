@@ -5,7 +5,7 @@
 
 CMSY_new<-function (x, Data, reps = 100) { ## add this to the end
   
-  dependencies = "Data@MaxAge, Data@vbK, Data@L50, Data@Cat, Data@Dep,Data@CV_Dep"
+  dependencies = "Data@MaxAge, Data@vbK, Data@L50, Data@vbt0[x], Data@vbLinf[x], Data@Cat, Data@Dep,Data@CV_Dep"
   
   ########### Helping functions ################################ 
   
