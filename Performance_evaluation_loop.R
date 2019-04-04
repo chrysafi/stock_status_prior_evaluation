@@ -21,7 +21,7 @@ Dir.in<- "C:/Users/"   #  Add the directory that the files are located
 
 ###### import data ################
 ## experts' priors
-setwd(paste(Dir.in,"DLM_data/",sep=""))
+setwd(paste(Dir.in,"DLM_data'/",sep=""))
 EXP_1<-read.table("EXP_1.txt",header=TRUE)
 EXP_2<-read.table("EXP_2.txt",header=TRUE)
 EXP_3<-read.table("EXP_3.txt",header=TRUE)
@@ -33,7 +33,7 @@ S<-c("Aurora","Bocaccio","Cabezon","Canary","Darkblotched","Dover","Petrale","ST
      "Arrow","GHL","Aplaice","Mackerel","Pop","Sablefish","Yellow","N_Rockfish")
 
 ## PSA derived mean and sd
-PSA<-read.table(paste(Dir.in,"DLM_data/PSA_S.txt",sep=""),header=TRUE)
+PSA<-read.table(paste(Dir.in,"DLM_data'/PSA_S.txt",sep=""),header=TRUE)
 
 reps<-1000
 ## Array for saving the model derived OFLs
@@ -44,7 +44,7 @@ Results<-array(NA,dim=c(9,6,reps),dimnames=list(c("exp1","exp2","exp3","pool","e
 ###################################################################################################################
 for (i in 1:10){
   ## creating a new data object for each species
-    data<-new('Data',paste(Dir.in,"DLM_data/", S[i],"_DLM.csv",sep=""))
+    data<-new('Data',paste(Dir.in,"DLM_data'/", S[i],"_DLM.csv",sep=""))
   
   #Standard input  
   data@BMSY_B0<-0.4
@@ -98,12 +98,10 @@ for (i in 1:10){
   
   ######### Expert corrected bias from Perälä et al. In revision #####
   
-  EBC<-read.table(paste(Dir.in,"EBC_Priors/ebc_",i,".txt",sep=""),header=TRUE)
+  EBC<-read.table(paste(Dir.in,"EBC_Priors'/ebc_",i,".txt",sep=""),header=TRUE)
   EBC<-unlist(EBC)
   mean<-EBC
   sd<-density(EBC)$bw
-  ebc<-rbeta(2000,alphaconv(mean,sd),betaconv(mean,sd))
-  ebc[is.na(ebc)]<-0
   data@Dep<-mean
   data@CV_Dep<-sd/mean 
   
