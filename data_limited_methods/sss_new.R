@@ -10,7 +10,7 @@ SSS_new<-function (x,data, reps)
     dependencies = "Data@Mort,Data@Dep, Data@vbLinf,Data@vbK, Data@Year, Data@Cat,Data@FMSY_M, Data@BMSY_B0
   Data@CV_Dep,Data@CV_Mort,Data@MaxAge, Data@L50, Data@Rec, Data@wla, Data@wlb"
   
-  Dir.in<-paste("C:/Users/" ,"SS_input_files/",sep="")  #  Add the directory that the files are located
+  Dir.in<-paste("C:/Users/" ,"SS_input_files'",sep="")  #  Add the directory that the files are located
   
   ########### change forecast file for each species #######################
   ########## forecast file #####################
@@ -120,10 +120,10 @@ SSS_new<-function (x,data, reps)
   #### selectivity changes #############
   slope<- -1
   intercept<-round(data@L50[x])
-  x<-seq(1,50,0.05)
-  mat.vec<-1/(1+exp(slope*(x-intercept)))
+  x2<-seq(1,50,0.05)
+  mat.vec<-1/(1+exp(slope*(x2-intercept)))
   mat.vec[mat.vec>0.95]
-  width.95per<-(x[mat.vec>0.95]-intercept)[1]
+  width.95per<-(x2[mat.vec>0.95]-intercept)[1]
   
   ##############
   
@@ -237,7 +237,7 @@ SSS_new<-function (x,data, reps)
   Rec
   
 }
-class(SSS.AC)<-"MP"
+class(SSS_new)<-"MP"
 
 sfExport('SSS_new')
 
